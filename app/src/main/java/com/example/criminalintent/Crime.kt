@@ -6,8 +6,10 @@ import java.util.*
 
 @Entity
 data class Crime(
-    @PrimaryKey val id: UUID = UUID.randomUUID(),
-    var title: String = "",
-    var date: Date = Date(),
-    var isSolved: Boolean = false
+    @PrimaryKey val id: UUID,
+    val title: String,
+    val date: Date,
+    val isSolved: Boolean,
+    val suspect: String = "",
+    val photoFileName: String? = null
 )
